@@ -110,7 +110,6 @@
     }
 
     function updateAppCache() {
-        //iconMap = new WeakMap();
         icons = [];
         input.value = "";
         FxosApps.all().then(icns => {
@@ -290,18 +289,10 @@
 
 
 
-    function renderIcon(icon) {
-        var appEl = document.createElement('div');
-        appEl.className = 'tile';
-        appEl.innerHTML = '<div class="wrapper"><div class="back" style="background-image: url(' + icon.icon + ');"></div><div class="front"></div></div>';
-        iconMap.set(appEl, icon);
-        apps.appendChild(appEl);
-    }
-
     function renderFav(icon) {
         iconHash[icon.icon] = icon;
         //var icon48 = icon.icon.replace(/\d{3}/,"128");
-        //console.log(icon48);
+        console.log(icon.icon);
 
         var img = icon.icon;
             if  (icon.app.manifest.name == "Browser")  img = "/img/adventure-time/48/finn.48.png";
@@ -322,7 +313,12 @@
             if  (icon.app.manifest.name == "Usage")      img = "/img/adventure-time/48/cake.48.png";
 
         var o = my_div("bottom-tile");
-        o.innerHTML = '<a href="#"><img class="dockicon" width="32px" height="32px" src="' + img + '"></a>';
+        // only modes 1 & 2 have bottom icons
+        if (2 == mode)
+            o.innerHTML = '<a href="#"><img class="dockicon" width="32px" height="32px" src="' + img + '"></a>';
+        if (1 == mode)
+            o.innerHTML = '<a href="#"><img class="dockicon" width="48px" height="48px" src="' + img + '"></a>';
+
         iconMap.set(o, icon);
         bottom.appendChild(o);
     }
@@ -344,17 +340,16 @@
             if  (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/64/cuber.64.png";
             if  (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/64/hudson.64.png";
             if  (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/64/llama.64.png";
-            if  (icon.app.manifest.name == "Video")    img = "/img/adventure-time/64/fiona.64.png";
-            if  (icon.app.manifest.name == "E-Mail")     img = "/img/adventure-time/64/billy.64.png";
-            if  (icon.app.manifest.name == "Usage")      img = "/img/adventure-time/64/cake.64.png";
+            if  (icon.app.manifest.name == "Video")       img = "/img/adventure-time/64/fiona.64.png";
+            if  (icon.app.manifest.name == "E-Mail")      img = "/img/adventure-time/64/billy.64.png";
+            if  (icon.app.manifest.name == "Usage")       img = "/img/adventure-time/64/cake.64.png";
 
         }
 
 
         var o = my_div("tile");
 //console.log(icon.icon);
-        o.innerHTML = '<a href="#"><img width="' + iconsize + 'px" height="' + iconsize +
-            'px" src="' + img + '">';
+        o.innerHTML = '<a href="#"><img width="' + iconsize + 'px" height="' + iconsize +  'px" src="' + img + '">';
 
         switch (mode) {
             case 0:
