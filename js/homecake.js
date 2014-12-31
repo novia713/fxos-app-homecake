@@ -70,7 +70,6 @@
                 break;
             case 3:
                 if (bottom) hide_bottom();
-                disableScrolling();
                 iconsize = 48;
                 toggle.innerHTML = "&nbsp;+&nbsp;";
                 break;
@@ -305,26 +304,25 @@
         //console.log(icon48);
 
         var img = icon.icon;
-            if  (icon.app.manifest.name == "Browser")  img = "/img/adventure-time/64/finn.64.png";
-            if  (icon.app.manifest.name == "Clock")    img = "/img/adventure-time/64/pija.64.png";
-            if  (icon.app.manifest.name == "FM Radio") img = "/img/adventure-time/64/reyhelado.64.png";
-            if  (icon.entryPoint == "dialer")    img = "/img/adventure-time/64/jake.64.png";
-            if  (icon.entryPoint == "contacts")  img = "/img/adventure-time/64/gunter.64.png";
-            if  (icon.app.manifest.name == "Calendar") img = "/img/adventure-time/64/chicle.64.png";
-            if  (icon.app.manifest.name == "Music")    img = "/img/adventure-time/64/caracol.64.png";
-            if  (icon.app.manifest.name == "Settings") img = "/img/adventure-time/64/bmo.64.png";
+            if  (icon.app.manifest.name == "Browser")  img = "/img/adventure-time/48/finn.48.png";
+            if  (icon.app.manifest.name == "Clock")    img = "/img/adventure-time/48/pija.48.png";
+            if  (icon.app.manifest.name == "FM Radio") img = "/img/adventure-time/48/reyhelado.48.png";
+            if  (icon.entryPoint == "dialer")    img = "/img/adventure-time/48/jake.48.png";
+            if  (icon.entryPoint == "contacts")  img = "/img/adventure-time/48/gunter.48.png";
+            if  (icon.app.manifest.name == "Calendar") img = "/img/adventure-time/48/chicle.48.png";
+            if  (icon.app.manifest.name == "Music")    img = "/img/adventure-time/48/caracol.48.png";
+            if  (icon.app.manifest.name == "Settings") img = "/img/adventure-time/48/bmo.48.png";
 
-            if  (icon.app.manifest.name == "Marketplace") img = "/img/adventure-time/64/ganso.64.png";
-            if  (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/64/cuber.64.png";
-            if  (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/64/hudson.64.png";
-            if  (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/64/llama.64.png";
-            if  (icon.app.manifest.name == "Video")    img = "/img/adventure-time/64/fiona.64.png";
-            if  (icon.app.manifest.name == "E-Mail")     img = "/img/adventure-time/64/billy.64.png";
-            if  (icon.app.manifest.name == "Usage")      img = "/img/adventure-time/64/cake.64.png";
+            if  (icon.app.manifest.name == "Marketplace") img = "/img/adventure-time/48/ganso.48.png";
+            if  (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/48/cuber.48.png";
+            if  (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/48/hudson.48.png";
+            if  (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/48/llama.48.png";
+            if  (icon.app.manifest.name == "Video")    img = "/img/adventure-time/48/fiona.48.png";
+            if  (icon.app.manifest.name == "E-Mail")     img = "/img/adventure-time/48/billy.48.png";
+            if  (icon.app.manifest.name == "Usage")      img = "/img/adventure-time/48/cake.48.png";
 
         var o = my_div("bottom-tile");
-        o.innerHTML = '<a href="#"><img class="dockicon" width="' + iconsize + 'px" height="' + iconsize +
-            'px" src="' + img + '"></a>';
+        o.innerHTML = '<a href="#"><img class="dockicon" width="32px" height="32px" src="' + img + '"></a>';
         iconMap.set(o, icon);
         bottom.appendChild(o);
     }
@@ -497,7 +495,6 @@
         var y=window.scrollY;
         window.onscroll=function(){window.scrollTo(x, y);};
     }
-
 
     /*
      * end auxiliary functions
