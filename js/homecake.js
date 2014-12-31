@@ -154,8 +154,7 @@
             if (filter === "" || icon.name.toLowerCase().indexOf(filter.toLowerCase()) != -1) {
                 if  (3 != mode) {
                     if (1 == mode) {
-
-                        //console.log(icon.app.manifest.developer.name);
+//console.log(icon.app.manifest.name);
                         if (icon.app.manifest.developer.name == "The Gaia Team" ||
                             icon.app.manifest.developer.name == "Mozilla")
                                 renderApp(icon);
@@ -305,18 +304,59 @@
         //var icon48 = icon.icon.replace(/\d{3}/,"128");
         //console.log(icon48);
 
+        var img = icon.icon;
+            if  (icon.app.manifest.name == "Browser")  img = "/img/adventure-time/64/finn.64.png";
+            if  (icon.app.manifest.name == "Clock")    img = "/img/adventure-time/64/pija.64.png";
+            if  (icon.app.manifest.name == "FM Radio") img = "/img/adventure-time/64/reyhelado.64.png";
+            if  (icon.entryPoint == "dialer")    img = "/img/adventure-time/64/jake.64.png";
+            if  (icon.entryPoint == "contacts")  img = "/img/adventure-time/64/gunter.64.png";
+            if  (icon.app.manifest.name == "Calendar") img = "/img/adventure-time/64/chicle.64.png";
+            if  (icon.app.manifest.name == "Music")    img = "/img/adventure-time/64/caracol.64.png";
+            if  (icon.app.manifest.name == "Settings") img = "/img/adventure-time/64/bmo.64.png";
+
+            if  (icon.app.manifest.name == "Marketplace") img = "/img/adventure-time/64/ganso.64.png";
+            if  (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/64/cuber.64.png";
+            if  (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/64/hudson.64.png";
+            if  (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/64/llama.64.png";
+            if  (icon.app.manifest.name == "Video")    img = "/img/adventure-time/64/fiona.64.png";
+            if  (icon.app.manifest.name == "E-Mail")     img = "/img/adventure-time/64/billy.64.png";
+            if  (icon.app.manifest.name == "Usage")      img = "/img/adventure-time/64/cake.64.png";
+
         var o = my_div("bottom-tile");
         o.innerHTML = '<a href="#"><img class="dockicon" width="' + iconsize + 'px" height="' + iconsize +
-            'px" src="' + icon.icon + '"></a>';
+            'px" src="' + img + '"></a>';
         iconMap.set(o, icon);
         bottom.appendChild(o);
     }
 
     function renderApp(icon) {
-        var o = my_div("tile");
+        var img = icon.icon;
 
+        if (1 == mode) {
+            if  (icon.app.manifest.name == "Browser")  img = "/img/adventure-time/64/finn.64.png";
+            if  (icon.app.manifest.name == "Clock")    img = "/img/adventure-time/64/pija.64.png";
+            if  (icon.app.manifest.name == "FM Radio") img = "/img/adventure-time/64/reyhelado.64.png";
+            if  (icon.entryPoint == "dialer")    img = "/img/adventure-time/64/jake.64.png";
+            if  (icon.entryPoint == "contacts")  img = "/img/adventure-time/64/gunter.64.png";
+            if  (icon.app.manifest.name == "Calendar") img = "/img/adventure-time/64/chicle.64.png";
+            if  (icon.app.manifest.name == "Music")    img = "/img/adventure-time/64/caracol.64.png";
+            if  (icon.app.manifest.name == "Settings") img = "/img/adventure-time/64/bmo.64.png";
+
+            if  (icon.app.manifest.name == "Marketplace") img = "/img/adventure-time/64/ganso.64.png";
+            if  (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/64/cuber.64.png";
+            if  (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/64/hudson.64.png";
+            if  (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/64/llama.64.png";
+            if  (icon.app.manifest.name == "Video")    img = "/img/adventure-time/64/fiona.64.png";
+            if  (icon.app.manifest.name == "E-Mail")     img = "/img/adventure-time/64/billy.64.png";
+            if  (icon.app.manifest.name == "Usage")      img = "/img/adventure-time/64/cake.64.png";
+
+        }
+
+
+        var o = my_div("tile");
+//console.log(icon.icon);
         o.innerHTML = '<a href="#"><img width="' + iconsize + 'px" height="' + iconsize +
-            'px" src="' + icon.icon + '">';
+            'px" src="' + img + '">';
 
         switch (mode) {
             case 0:

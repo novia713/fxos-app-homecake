@@ -1,7 +1,7 @@
 {
-  "name": "Lonecake",
+  "name": "Lonecake AdvTime",
   "launch_path": "/index.html",
-  "description": "An alternative homescreen. Forked from Homecake.",
+  "description": "An alternative homescreen. Forked from Homecake. [Adventure Time version]",
   "type": "certified",
   "role": "homescreen",
   "orientation": ["portrait-primary"],
