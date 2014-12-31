@@ -129,15 +129,15 @@
 
     function updateFavs() {
         bottom.innerHTML = "";
-        icons.map(function(obj){
+        icons.map(function(obj) {
             if (favs.indexOf(obj.name) != -1)
                 renderFav(obj);
         });
     }
 
     function order_by_date(obj) {
-        return obj.sort( function(a, b){
-          return b.installTime - a.installTime;
+        return obj.sort(function(a, b) {
+            return b.installTime - a.installTime;
         });
     }
 
@@ -150,23 +150,23 @@
             var icon = icons[idx];
             console.log(icon);
             if (filter === "" || icon.name.toLowerCase().indexOf(filter.toLowerCase()) != -1) {
-                if  (3 != mode) {
+                if (3 != mode) {
                     if (1 == mode) {
-//console.log(icon.app.manifest.name);
+                        //console.log(icon.app.manifest.name);
                         if (icon.app.manifest.developer.name == "The Gaia Team" ||
                             icon.app.manifest.developer.name == "Mozilla")
-                                renderApp(icon);
+                            renderApp(icon);
                     }
                     if (2 == mode) {
                         if (icon.app.manifest.developer.name != "The Gaia Team" &&
                             icon.app.manifest.developer.name != "Mozilla")
-                                renderApp(icon);
+                            renderApp(icon);
                     }
                     if (0 == mode) {
                         renderApp(icon);
                     }
 
-                }else{
+                } else {
                     renderApp4Grid(icon);
                 }
             }
@@ -262,23 +262,22 @@
             //not supported prior 2.0
             var appMgr = window.navigator.mozApps.mgmt;
 
-            appMgr.addEventListener("install", function (event) {
-                setTimeout (function() {
+            appMgr.addEventListener("install", function(event) {
+                setTimeout(function() {
 
                     updateAppCache();
                     useMode(mode);
                 }, 2500);
             });
 
-            appMgr.addEventListener("uninstall", function (event) {
-                setTimeout (function() {
+            appMgr.addEventListener("uninstall", function(event) {
+                setTimeout(function() {
 
                     updateAppCache();
                     useMode(mode);
                 }, 2500);
             });
-            }
-        catch(err) {
+        } catch (err) {
             alert("install/uninstall apps won't work  in < 2.0 FirefoxOS versions in this app");
         }
 
@@ -292,64 +291,26 @@
     function renderFav(icon) {
         iconHash[icon.icon] = icon;
         //var icon48 = icon.icon.replace(/\d{3}/,"128");
-        console.log(icon.icon);
-
-        var img = icon.icon;
-            if  (icon.app.manifest.name == "Browser")  img = "/img/adventure-time/48/finn.48.png";
-            if  (icon.app.manifest.name == "Clock")    img = "/img/adventure-time/48/pija.48.png";
-            if  (icon.app.manifest.name == "FM Radio") img = "/img/adventure-time/48/reyhelado.48.png";
-            if  (icon.entryPoint == "dialer")    img = "/img/adventure-time/48/jake.48.png";
-            if  (icon.entryPoint == "contacts")  img = "/img/adventure-time/48/gunter.48.png";
-            if  (icon.app.manifest.name == "Calendar") img = "/img/adventure-time/48/chicle.48.png";
-            if  (icon.app.manifest.name == "Music")    img = "/img/adventure-time/48/caracol.48.png";
-            if  (icon.app.manifest.name == "Settings") img = "/img/adventure-time/48/bmo.48.png";
-
-            if  (icon.app.manifest.name == "Marketplace") img = "/img/adventure-time/48/ganso.48.png";
-            if  (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/48/cuber.48.png";
-            if  (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/48/hudson.48.png";
-            if  (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/48/llama.48.png";
-            if  (icon.app.manifest.name == "Video")    img = "/img/adventure-time/48/fiona.48.png";
-            if  (icon.app.manifest.name == "E-Mail")     img = "/img/adventure-time/48/billy.48.png";
-            if  (icon.app.manifest.name == "Usage")      img = "/img/adventure-time/48/cake.48.png";
+        //console.log(icon.icon);
 
         var o = my_div("bottom-tile");
         // only modes 1 & 2 have bottom icons
         if (2 == mode)
-            o.innerHTML = '<a href="#"><img class="dockicon" width="32px" height="32px" src="' + img + '"></a>';
+            o.innerHTML = '<a href="#"><img class="dockicon" width="32px" height="32px" src="' + get_icon(icon, "48") + '"></a>';
         if (1 == mode)
-            o.innerHTML = '<a href="#"><img class="dockicon" width="48px" height="48px" src="' + img + '"></a>';
+            o.innerHTML = '<a href="#"><img class="dockicon" width="48px" height="48px" src="' + get_icon(icon, "48") + '"></a>';
 
         iconMap.set(o, icon);
         bottom.appendChild(o);
     }
 
     function renderApp(icon) {
-        var img = icon.icon;
-
-        if (1 == mode) {
-            if  (icon.app.manifest.name == "Browser")  img = "/img/adventure-time/64/finn.64.png";
-            if  (icon.app.manifest.name == "Clock")    img = "/img/adventure-time/64/pija.64.png";
-            if  (icon.app.manifest.name == "FM Radio") img = "/img/adventure-time/64/reyhelado.64.png";
-            if  (icon.entryPoint == "dialer")    img = "/img/adventure-time/64/jake.64.png";
-            if  (icon.entryPoint == "contacts")  img = "/img/adventure-time/64/gunter.64.png";
-            if  (icon.app.manifest.name == "Calendar") img = "/img/adventure-time/64/chicle.64.png";
-            if  (icon.app.manifest.name == "Music")    img = "/img/adventure-time/64/caracol.64.png";
-            if  (icon.app.manifest.name == "Settings") img = "/img/adventure-time/64/bmo.64.png";
-
-            if  (icon.app.manifest.name == "Marketplace") img = "/img/adventure-time/64/ganso.64.png";
-            if  (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/64/cuber.64.png";
-            if  (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/64/hudson.64.png";
-            if  (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/64/llama.64.png";
-            if  (icon.app.manifest.name == "Video")       img = "/img/adventure-time/64/fiona.64.png";
-            if  (icon.app.manifest.name == "E-Mail")      img = "/img/adventure-time/64/billy.64.png";
-            if  (icon.app.manifest.name == "Usage")       img = "/img/adventure-time/64/cake.64.png";
-
-        }
-
-
         var o = my_div("tile");
-//console.log(icon.icon);
-        o.innerHTML = '<a href="#"><img width="' + iconsize + 'px" height="' + iconsize +  'px" src="' + img + '">';
+        if (1 == mode) {
+            o.innerHTML = '<a href="#"><img width="64px" height="64px" src="' + get_icon(icon, "64") + '">';
+        } else {
+            o.innerHTML = '<a href="#"><img width="' + iconsize + 'px" height="' + iconsize + 'px" src="' + icon.icon + '">';
+        }
 
         switch (mode) {
             case 0:
@@ -373,8 +334,7 @@
 
         var o = my_div("grid");
 
-        o.innerHTML = '<a href="#"><img width="' + iconsize + 'px" height="' + iconsize +
-            'px" src="' + icon.icon + '"></a>';
+        o.innerHTML = '<a href="#"><img width="' + iconsize + 'px" height="' + iconsize + 'px" src="' + icon.icon + '"></a>';
 
         iconHash[icon.icon] = icon;
         iconMap.set(o, icon);
@@ -407,15 +367,15 @@
     window.addEventListener('touchstart', function(te) {
         touch_top = document.body.scrollTop; // screen offset
         if (canDelete) {
-            longpress = setTimeout (function(e) {
+            longpress = setTimeout(function(e) {
                 longpress = null;
-                var icon = getIconFor (te.target);
+                var icon = getIconFor(te.target);
                 //console.log(icon.app);
                 var appMgr = navigator.mozApps.mgmt;
 
                 if (icon.app.removable)
                     appMgr.uninstall(icon.app);
-                else{
+                else {
                     alert(icon.app.manifest.name + " is not removable");
                     return;
                 }
@@ -425,36 +385,36 @@
     });
     window.addEventListener('touchmove', function(e) {
         var cur_touch_top = document.body.scrollTop; // screen offset
-        if (Math.abs (cur_touch_top-touch_top)) {
+        if (Math.abs(cur_touch_top - touch_top)) {
             if (longpress) {
-                clearTimeout (longpress);
+                clearTimeout(longpress);
                 longpress = null;
             }
         }
     });
 
     window.addEventListener('touchend', function(e) {
-        if (longpress) clearTimeout (longpress);
+        if (longpress) clearTimeout(longpress);
         longpress = null;
     });
 
-    function getIconFor (target) {
+    function getIconFor(target) {
         if (target.src)
             return iconHash[target.src];
         else
-            return (target.childNodes[0].childNodes[0].src)? iconHash[target.childNodes[0].childNodes[0].src] : null;
+            return (target.childNodes[0].childNodes[0].src) ? iconHash[target.childNodes[0].childNodes[0].src] : null;
     }
 
 
     // end install/uninstall
 
     window.addEventListener('hashchange', function() {
-          /* Home button is pressed */
-          updateAppCache();
-          useMode(mode);
+        /* Home button is pressed */
+        updateAppCache();
+        useMode(mode);
 
-          return false;
-      });
+        return false;
+    });
 
 
 
@@ -485,10 +445,34 @@
         return appEl;
     }
 
-    function disableScrolling(){
-        var x=window.scrollX;
-        var y=window.scrollY;
-        window.onscroll=function(){window.scrollTo(x, y);};
+    function disableScrolling() {
+        var x = window.scrollX;
+        var y = window.scrollY;
+        window.onscroll = function() {
+            window.scrollTo(x, y);
+        };
+    }
+
+    function get_icon(icon, size) {
+        var img = icon.icon;
+        if (icon.app.manifest.name == "Browser")     img = "/img/adventure-time/" + size + "/finn." + size + ".png";
+        if (icon.app.manifest.name == "Clock")       img = "/img/adventure-time/" + size + "/pija." + size + ".png";
+        if (icon.app.manifest.name == "FM Radio")    img = "/img/adventure-time/" + size + "/reyhelado." + size + ".png";
+        if (icon.entryPoint == "dialer")             img = "/img/adventure-time/" + size + "/jake." + size + ".png";
+        if (icon.entryPoint == "contacts")           img = "/img/adventure-time/" + size + "/gunter." + size + ".png";
+        if (icon.app.manifest.name == "Calendar")    img = "/img/adventure-time/" + size + "/chicle." + size + ".png";
+        if (icon.app.manifest.name == "Music")       img = "/img/adventure-time/" + size + "/caracol." + size + ".png";
+        if (icon.app.manifest.name == "Settings")    img = "/img/adventure-time/" + size + "/bmo." + size + ".png";
+
+        if (icon.app.manifest.name == "Marketplace") img = "/img/adventure-time/" + size + "/ganso." + size + ".png";
+        if (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/" + size + "/cuber." + size + ".png";
+        if (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/" + size + "/hudson." + size + ".png";
+        if (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/" + size + "/llama." + size + ".png";
+        if (icon.app.manifest.name == "Video")       img = "/img/adventure-time/" + size + "/fiona." + size + ".png";
+        if (icon.app.manifest.name == "E-Mail")      img = "/img/adventure-time/" + size + "/billy." + size + ".png";
+        if (icon.app.manifest.name == "Usage")       img = "/img/adventure-time/" + size + "/cake." + size + ".png";
+
+        return img;
     }
 
     /*
