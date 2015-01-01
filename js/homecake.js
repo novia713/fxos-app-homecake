@@ -459,22 +459,23 @@
 
     function get_icon(icon, size) {
         var img = icon.icon;
-        if (icon.app.manifest.name == "Browser")     img = "/img/adventure-time/" + size + "/finn." + size + ".png";
-        if (icon.app.manifest.name == "Clock")       img = "/img/adventure-time/" + size + "/pija." + size + ".png";
-        if (icon.app.manifest.name == "FM Radio")    img = "/img/adventure-time/" + size + "/reyhelado." + size + ".png";
-        if (icon.entryPoint == "dialer")             img = "/img/adventure-time/" + size + "/jake." + size + ".png";
-        if (icon.entryPoint == "contacts")           img = "/img/adventure-time/" + size + "/gunter." + size + ".png";
-        if (icon.app.manifest.name == "Calendar")    img = "/img/adventure-time/" + size + "/chicle." + size + ".png";
-        if (icon.app.manifest.name == "Music")       img = "/img/adventure-time/" + size + "/caracol." + size + ".png";
-        if (icon.app.manifest.name == "Settings")    img = "/img/adventure-time/" + size + "/bmo." + size + ".png";
+        var dir = "dontstarve";
+        if (icon.app.manifest.name == "Browser")     img = "/img/dontstarve/diamante.png";
+        if (icon.app.manifest.name == "Clock")       img = "/img/dontstarve/reloj.png";
+        if (icon.app.manifest.name == "FM Radio")    img = "/img/dontstarve/sombreo.png";
+        if (icon.entryPoint == "dialer")             img = "/img/dontstarve/cuerda.png";
+        if (icon.entryPoint == "contacts")           img = "/img/dontstarve/maza.png";
+        if (icon.app.manifest.name == "Calendar")    img = "/img/dontstarve/salud.png";
+        if (icon.app.manifest.name == "Music")       img = "/img/dontstarve/zanahoria.png";
+        if (icon.app.manifest.name == "Settings")    img = "/img/dontstarve/herramientas.png";
 
-        if (icon.app.manifest.name == "Marketplace") img = "/img/adventure-time/" + size + "/ganso." + size + ".png";
-        if (icon.app.manifest.name == "Messages")    img = "/img/adventure-time/" + size + "/cuber." + size + ".png";
-        if (icon.app.manifest.name == "Gallery")     img = "/img/adventure-time/" + size + "/hudson." + size + ".png";
-        if (icon.app.manifest.name == "Camera")      img = "/img/adventure-time/" + size + "/llama." + size + ".png";
-        if (icon.app.manifest.name == "Video")       img = "/img/adventure-time/" + size + "/fiona." + size + ".png";
-        if (icon.app.manifest.name == "E-Mail")      img = "/img/adventure-time/" + size + "/billy." + size + ".png";
-        if (icon.app.manifest.name == "Usage")       img = "/img/adventure-time/" + size + "/cake." + size + ".png";
+        if (icon.app.manifest.name == "Marketplace") img = "/img/dontstarve/calavera.png";
+        if (icon.app.manifest.name == "Messages")    img = "/img/dontstarve/nina.png";
+        if (icon.app.manifest.name == "Gallery")     img = "/img/dontstarve/templo.png";
+        if (icon.app.manifest.name == "Camera")      img = "/img/dontstarve/polloraro.png";
+        if (icon.app.manifest.name == "Video")       img = "/img/dontstarve/gema.png";
+        if (icon.app.manifest.name == "E-Mail")      img = "/img/dontstarve/armas.png";
+        if (icon.app.manifest.name == "Usage")       img = "/img/dontstarve/agua.png";
 
         return img;
     }

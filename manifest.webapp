@@ -1,13 +1,13 @@
 {
-  "name": "Lonecake AdvTime",
+  "name": "Lonecake Don't Starve",
   "launch_path": "/index.html",
-  "description": "An alternative homescreen. Forked from Homecake. [Adventure Time version]",
+  "description": "An alternative homescreen. Forked from Homecake. [Don't Starve version]",
   "type": "certified",
   "role": "homescreen",
   "orientation": ["portrait-primary"],
   "developer": {
     "name": "leandro713",
-    "url": "https://github.com/novia713/fxos-app-homecake/tree/miniicons"
+    "url": "https://github.com/novia713/fxos-app-homecake/tree/dontstarve"
   },
   "permissions": {
     "webapps-manage":{},
