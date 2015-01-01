@@ -459,23 +459,23 @@
 
     function get_icon(icon, size) {
         var img = icon.icon;
-        var dir = "dontstarve";
-        if (icon.app.manifest.name == "Browser")     img = "/img/dontstarve/diamante.png";
-        if (icon.app.manifest.name == "Clock")       img = "/img/dontstarve/reloj.png";
-        if (icon.app.manifest.name == "FM Radio")    img = "/img/dontstarve/sombreo.png";
-        if (icon.entryPoint == "dialer")             img = "/img/dontstarve/cuerda.png";
-        if (icon.entryPoint == "contacts")           img = "/img/dontstarve/maza.png";
-        if (icon.app.manifest.name == "Calendar")    img = "/img/dontstarve/salud.png";
-        if (icon.app.manifest.name == "Music")       img = "/img/dontstarve/zanahoria.png";
-        if (icon.app.manifest.name == "Settings")    img = "/img/dontstarve/herramientas.png";
+        var dir = "minecraft";
+        if (icon.app.manifest.name == "Browser")     img = "/img/" + dir + "/crafting_table.png";
+        if (icon.app.manifest.name == "Clock")       img = "/img/" + dir + "/Cake.png";
+        if (icon.app.manifest.name == "FM Radio")    img = "/img/" + dir + "/diamond.png";
+        if (icon.entryPoint == "dialer")             img = "/img/" + dir + "/enderman.png";
+        if (icon.entryPoint == "contacts")           img = "/img/" + dir + "/creeper.png";
+        if (icon.app.manifest.name == "Calendar")    img = "/img/" + dir + "/wood.png";
+        if (icon.app.manifest.name == "Music")       img = "/img/" + dir + "/Grass.png";
+        if (icon.app.manifest.name == "Settings")    img = "/img/" + dir + "/chest.png";
 
-        if (icon.app.manifest.name == "Marketplace") img = "/img/dontstarve/calavera.png";
-        if (icon.app.manifest.name == "Messages")    img = "/img/dontstarve/nina.png";
-        if (icon.app.manifest.name == "Gallery")     img = "/img/dontstarve/templo.png";
-        if (icon.app.manifest.name == "Camera")      img = "/img/dontstarve/polloraro.png";
-        if (icon.app.manifest.name == "Video")       img = "/img/dontstarve/gema.png";
-        if (icon.app.manifest.name == "E-Mail")      img = "/img/dontstarve/armas.png";
-        if (icon.app.manifest.name == "Usage")       img = "/img/dontstarve/agua.png";
+        if (icon.app.manifest.name == "Marketplace") img = "/img/" + dir + "/Diamond_Sword.png";
+        if (icon.app.manifest.name == "Messages")    img = "/img/" + dir + "/Gold_Ingot.png";
+        if (icon.app.manifest.name == "Gallery")     img = "/img/" + dir + "/bucket_empty.png";
+        if (icon.app.manifest.name == "Camera")      img = "/img/" + dir + "/zombie.png";
+        if (icon.app.manifest.name == "Video")       img = "/img/" + dir + "/Ghast.png";
+        if (icon.app.manifest.name == "E-Mail")      img = "/img/" + dir + "/tnt.png";
+        if (icon.app.manifest.name == "Usage")       img = "/img/" + dir + "/bucket_lava.png";
 
         return img;
     }

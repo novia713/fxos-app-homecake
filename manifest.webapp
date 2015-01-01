@@ -1,13 +1,13 @@
 {
-  "name": "Lonecake Don't Starve",
+  "name": "Lonecake Minecraft",
   "launch_path": "/index.html",
-  "description": "An alternative homescreen. Forked from Homecake. [Don't Starve version]",
+  "description": "An alternative homescreen. Forked from Homecake. [Minecraft version]",
   "type": "certified",
   "role": "homescreen",
   "orientation": ["portrait-primary"],
   "developer": {
     "name": "leandro713",
-    "url": "https://github.com/novia713/fxos-app-homecake/tree/dontstarve"
+    "url": "https://github.com/novia713/fxos-app-homecake/tree/minecraft"
   },
   "permissions": {
     "webapps-manage":{},
