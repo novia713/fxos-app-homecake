@@ -148,7 +148,7 @@
 
         for (var idx in order_by_date(icons)) {
             var icon = icons[idx];
-            console.log(icon);
+            //console.log(icon);
             if (filter === "" || icon.name.toLowerCase().indexOf(filter.toLowerCase()) != -1) {
                 if (3 != mode) {
                     if (1 == mode) {
@@ -370,14 +370,18 @@
             longpress = setTimeout(function(e) {
                 longpress = null;
                 var icon = getIconFor(te.target);
-                //console.log(icon.app);
-                var appMgr = navigator.mozApps.mgmt;
-
-                if (icon.app.removable)
-                    appMgr.uninstall(icon.app);
-                else {
-                    alert(icon.app.manifest.name + " is not removable");
-                    return;
+                if (icon) {
+                    try {
+                    var appMgr = navigator.mozApps.mgmt;
+                        if (icon.app.removable)
+                            appMgr.uninstall(icon.app);
+                        else {
+                            alert(icon.app.manifest.name + " is not removable");
+                            return;
+                        }
+                    } catch (err) {
+                        alert("install/uninstall apps won't work  in < 2.0 FirefoxOS versions in this app");
+                    }
                 }
 
             }, LONG_PRESS_TIMEOUT);
