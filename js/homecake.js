@@ -317,7 +317,7 @@
   }
 
   function renderApp(icon) {
-
+console.log(icon);
     var o = my_div("tile");
 
     var DOM_a = document.createElement("a");
@@ -336,7 +336,7 @@
         break;
       case 1:
 
-        DOM_img.src = icon.icon;
+        DOM_img.src = get_icon(icon, "64");
         DOM_img.width = iconsize;
         DOM_img.height = iconsize;
 
@@ -508,8 +508,8 @@
 
 
   function get_icon(icon, size) {
-
     var img = icon.icon;
+    console.log(img);
     var dir = "dbz";
     if (icon.app.manifest.name == "Browser") img = "/img/dbz/5X843ks.gif";
     if (icon.app.manifest.name == "Clock") img = "/img/dbz/6bJpRKl.gif";
