@@ -47,32 +47,32 @@
     switch (mode) {
       case 0:
         iconsize = 284;
-      if (bottom) hide_bottom();
-      toggle.innerHTML = "&nbsp;=&nbsp;";
-      break;
+        if (bottom) hide_bottom();
+        toggle.innerHTML = "&nbsp;=&nbsp;";
+        break;
       case 1:
         //favs for normal mode
         favs = normalfavs;
 
-      iconsize = 64;
-      bottom.style.height = "76px";
-      if (bottom) show_bottom();
-      toggle.innerHTML = "&nbsp;-&nbsp;";
-      break;
+        iconsize = 64;
+        bottom.style.height = "76px";
+        if (bottom) show_bottom();
+        toggle.innerHTML = "&nbsp;-&nbsp;";
+        break;
       case 2:
         //favs in dock for miniicons
         favs = minifavs;
 
-      iconsize = 38;
-      bottom.style.height = "48px";
-      if (bottom) show_bottom();
-      toggle.innerHTML = "&nbsp;▦&nbsp;";
-      break;
+        iconsize = 38;
+        bottom.style.height = "48px";
+        if (bottom) show_bottom();
+        toggle.innerHTML = "&nbsp;▦&nbsp;";
+        break;
       case 3:
         if (bottom) hide_bottom();
-      iconsize = 48;
-      toggle.innerHTML = "&nbsp;+&nbsp;";
-      break;
+        iconsize = 48;
+        toggle.innerHTML = "&nbsp;+&nbsp;";
+        break;
     }
 
     apps.setAttribute("class", (3 == mode) ? "grid_container" : "apps");
@@ -155,12 +155,12 @@
 
             //console.log(icon.app.manifest.developer.name);
             if (icon.app.manifest.developer.name == "The Gaia Team" ||
-                icon.app.manifest.developer.name == "Mozilla")
+              icon.app.manifest.developer.name == "Mozilla")
               renderApp(icon);
           }
           if (2 == mode) {
             if (icon.app.manifest.developer.name != "The Gaia Team" &&
-                icon.app.manifest.developer.name != "Mozilla")
+              icon.app.manifest.developer.name != "Mozilla")
               renderApp(icon);
           }
 
@@ -302,8 +302,11 @@
     var DOM_img = document.createElement("img");
 
     (mode === 0) ?
-      DOM_img.src = icon.big_icon:
+    DOM_img.src = icon.big_icon:
       DOM_img.src = icon.icon;
+
+    if (1 == mode || 2 == mode)
+      DOM_img.src = get_icon(icon, "48");
 
     DOM_img.width = iconsize;
     DOM_img.height = iconsize;
@@ -332,35 +335,36 @@
       case 0:
 
         DOM_img.src = icon.big_icon;
-      DOM_img.width = iconsize;
-      DOM_a.appendChild(DOM_img);
-      break;
+        DOM_img.width = iconsize;
+        DOM_a.appendChild(DOM_img);
+        break;
       case 1:
 
-        DOM_img.src = icon.icon;
-      DOM_img.width = iconsize;
+        DOM_img.src = get_icon(icon, "64");
+        DOM_img.width = iconsize;
+        // console.log(DOM_img);
 
-      DOM_span.appendChild(document.createTextNode(icon.name));
-      DOM_span.className = "appname";
+        DOM_span.appendChild(document.createTextNode(icon.name));
+        DOM_span.className = "appname";
 
-      DOM_a.appendChild(DOM_img);
-      DOM_a.appendChild(DOM_span);
+        DOM_a.appendChild(DOM_img);
+        DOM_a.appendChild(DOM_span);
 
-      break;
+        break;
       case 2:
 
         DOM_img.src = icon.icon;
-      DOM_img.width = iconsize;
+        DOM_img.width = iconsize;
 
 
-      DOM_span.appendChild(document.createTextNode(icon.name));
-      DOM_span.className = "appname-cute";
+        DOM_span.appendChild(document.createTextNode(icon.name));
+        DOM_span.className = "appname-cute";
 
-      DOM_a.appendChild(DOM_img);
-      DOM_a.appendChild(DOM_span);
+        DOM_a.appendChild(DOM_img);
+        DOM_a.appendChild(DOM_span);
 
 
-      break;
+        break;
     }
 
     iconHash[icon.icon] = icon;
@@ -506,6 +510,29 @@
     return appEl;
   }
 
+
+  function get_icon(icon, size) {
+    var img = icon.icon;
+    var dir = "dbz";
+    if (icon.app.manifest.name == "Browser") img = "/img/dbz/5X843ks.gif";
+    if (icon.app.manifest.name == "Clock") img = "/img/dbz/6bJpRKl.gif";
+    if (icon.app.manifest.name == "FM Radio") img = "/img/dbz/8FsqnTC.gif";
+    if (icon.entryPoint == "dialer") img = "/img/dbz/AkYDsI8.gif";
+    if (icon.entryPoint == "contacts") img = "/img/dbz/biLPGS9.gif";
+    if (icon.app.manifest.name == "Calendar") img = "/img/dbz/HaYOBDu.gif";
+    if (icon.app.manifest.name == "Music") img = "/img/dbz/HNnNWm5.gif";
+    if (icon.app.manifest.name == "Settings") img = "/img/dbz/kpYjPex.gif";
+
+    if (icon.app.manifest.name == "Marketplace") img = "/img/dbz/Mp6e1TH.gif";
+    if (icon.app.manifest.name == "Messages") img = "/img/dbz/Nbrgdn3.gif";
+    if (icon.app.manifest.name == "Gallery") img = "/img/dbz/rj4MyPa.gif";
+    if (icon.app.manifest.name == "Camera") img = "/img/dbz/SVsRITU.gif";
+    if (icon.app.manifest.name == "Video") img = "/img/dbz/T8qgINH.gif";
+    if (icon.app.manifest.name == "E-Mail") img = "/img/dbz/XOEwhk6.gif";
+    if (icon.app.manifest.name == "Usage") img = "/img/dbz/xvti1NJ.gif";
+
+    return img;
+  }
 
   /*
    * end auxiliary functions
