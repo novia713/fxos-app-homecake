@@ -22,6 +22,7 @@
   var bottom = document.getElementById('bottom');
   var topbar = document.getElementById('topbar');
   var input = document.getElementById('input');
+  var toggle = document.getElementById('toggle');
   var iconsize = 64;
   var iconMap = new WeakMap();
   var writing = false;
@@ -174,11 +175,6 @@
   }
 
   window.addEventListener("DOMContentLoaded", () => {
-    apps = document.getElementById('apps');
-    bottom = document.getElementById('bottom');
-    topbar = document.getElementById('topbar');
-    input = document.getElementById('input');
-    toggle = document.getElementById('toggle');
     input.value = "";
     writing = false;
     input.onkeyup = function() {
@@ -342,7 +338,6 @@
 
         DOM_img.src = get_icon(icon, "64");
         DOM_img.width = iconsize;
-        // console.log(DOM_img);
 
         DOM_span.appendChild(document.createTextNode(icon.name));
         DOM_span.className = "appname";
@@ -371,7 +366,7 @@
     iconMap.set(o, icon);
     o.appendChild(DOM_a);
     apps.appendChild(o);
-
+console.log(apps);
   }
 
   function renderApp4Grid(icon) {
@@ -461,7 +456,7 @@
     if (target.src)
       return iconHash[target.src];
     else
-      return (target.childNodes[0].childNodes[0].src) ? iconHash[target.childNodes[0].childNodes[0].src] : null;
+      return (typeof target.childNodes[0].childNodes[0] != 'undefined' && target.childNodes[0].childNodes[0].src) ? iconHash[target.childNodes[0].childNodes[0].src] : null;
   }
 
 
@@ -489,13 +484,13 @@
   }
 
   function hide_bottom() {
-    bottom.style.transition = "opacity 1s ease-in-out, visibility 1s linear";
+    bottom.style.transition = "opacity 0.5s ease-in-out, visibility 1s linear";
     bottom.style.opacity = 0;
     bottom.style.visibility = 'hidden';
   }
 
   function hide_topbar() {
-    topbar.style.transition = "opacity 1s ease-in-out, visibility 1s linear";
+    topbar.style.transition = "opacity 0.5s ease-in-out, visibility 1s linear";
     topbar.style.visibility = 'hidden';
   }
 
@@ -512,6 +507,7 @@
 
 
   function get_icon(icon, size) {
+
     var img = icon.icon;
     var dir = "dbz";
     if (icon.app.manifest.name == "Browser") img = "/img/dbz/5X843ks.gif";
