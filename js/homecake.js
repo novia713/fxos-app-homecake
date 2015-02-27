@@ -336,8 +336,9 @@
         break;
       case 1:
 
-        DOM_img.src = get_icon(icon, "64");
+        DOM_img.src = icon.icon;
         DOM_img.width = iconsize;
+        DOM_img.height = iconsize;
 
         DOM_span.appendChild(document.createTextNode(icon.name));
         DOM_span.className = "appname";
@@ -366,7 +367,7 @@
     iconMap.set(o, icon);
     o.appendChild(DOM_a);
     apps.appendChild(o);
-console.log(apps);
+
   }
 
   function renderApp4Grid(icon) {
