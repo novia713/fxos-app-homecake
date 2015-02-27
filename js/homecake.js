@@ -301,8 +301,11 @@
     DOM_img.src = icon.big_icon:
       DOM_img.src = icon.icon;
 
-    if (1 == mode || 2 == mode)
+    // custom icons
+    if (1 == mode || 2 == mode) {
       DOM_img.src = get_icon(icon, "48");
+      DOM_img.setAttribute("title", icon.icon);
+    }
 
     DOM_img.width = iconsize;
     DOM_img.height = iconsize;
@@ -317,7 +320,6 @@
   }
 
   function renderApp(icon) {
-console.log(icon);
     var o = my_div("tile");
 
     var DOM_a = document.createElement("a");
@@ -336,7 +338,11 @@ console.log(icon);
         break;
       case 1:
 
-        DOM_img.src = get_icon(icon, "64");
+        // custom icons
+        DOM_img.src = get_icon(icon);
+        DOM_img.setAttribute("title", icon.icon);
+
+
         DOM_img.width = iconsize;
         DOM_img.height = iconsize;
 
@@ -453,11 +459,12 @@ console.log(icon);
   });
 
   function getIconFor(target) {
-    //console.log(target);
-    if (target.src)
-      return iconHash[target.src];
-    else
-      return (typeof target.childNodes[0].childNodes[0] != 'undefined' && target.childNodes[0].childNodes[0].src) ? iconHash[target.childNodes[0].childNodes[0].src] : null;
+      //the following line is only for custom icons
+      if (typeof target.childNodes[0] != 'undefined' && target.childNodes[0].childNodes[0].title) return iconHash[target.childNodes[0].childNodes[0].title];
+      return (target.src)?
+      iconHash[target.src]:
+      (typeof target.childNodes[0].childNodes[0] != 'undefined' && target.childNodes[0].childNodes[0].src) ? iconHash[target.childNodes[0].childNodes[0].src] : null;
+
   }
 
 
@@ -507,10 +514,9 @@ console.log(icon);
   }
 
 
-  function get_icon(icon, size) {
+  function get_icon(icon) { //custom icons
     var img = icon.icon;
-    console.log(img);
-    var dir = "dbz";
+
     if (icon.app.manifest.name == "Browser") img = "/img/dbz/5X843ks.gif";
     if (icon.app.manifest.name == "Clock") img = "/img/dbz/6bJpRKl.gif";
     if (icon.app.manifest.name == "FM Radio") img = "/img/dbz/8FsqnTC.gif";
