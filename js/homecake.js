@@ -348,6 +348,7 @@
 
         DOM_span.appendChild(document.createTextNode(icon.name));
         DOM_span.className = "appname";
+        DOM_span.style.color = '#'+Math.floor(Math.random()*16777215).toString(16); //random hex color
 
         DOM_a.appendChild(DOM_img);
         DOM_a.appendChild(DOM_span);
