@@ -401,7 +401,7 @@
   window.addEventListener('click', function(e) {
     var container = e.target;
     // var icon = iconMap.get(container);
-    var icon = getIconFor(e.target);
+    var icon = getAppFor(e.target);
     if (!icon) {
       container = container.parentNode.parentNode;
       icon = iconMap.get(container);
@@ -424,7 +424,7 @@
     if (canDelete) {
       longpress = setTimeout(function(e) {
         longpress = null;
-        var icon = getIconFor(te.target);
+        var icon = getAppFor(te.target);
         if (icon) {
           try {
             var appMgr = navigator.mozApps.mgmt;
@@ -458,12 +458,17 @@
     longpress = null;
   });
 
-  function getIconFor(target) {
-      //the following line is only for custom icons
-      if (typeof target.childNodes[0] != 'undefined' && target.childNodes[0].childNodes[0].title) return iconHash[target.childNodes[0].childNodes[0].title];
-      return (target.src)?
-      iconHash[target.src]:
-      (typeof target.childNodes[0].childNodes[0] != 'undefined' && target.childNodes[0].childNodes[0].src) ? iconHash[target.childNodes[0].childNodes[0].src] : null;
+  function getAppFor(target) {
+
+    //the following line is only for custom icons
+    if (typeof target.childNodes[0] != 'undefined' && target.childNodes[0].childNodes[0].title)
+      return iconHash[target.childNodes[0].childNodes[0].title];
+
+    return (target.src) ?
+      iconHash[target.src] :
+      (typeof target.childNodes[0].childNodes[0] != 'undefined' && target.childNodes[0].childNodes[0].src) ?
+        iconHash[target.childNodes[0].childNodes[0].src] :
+        null;
 
   }
 
