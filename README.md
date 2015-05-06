@@ -1,4 +1,4 @@
-# ![alt tag](http://pix.toile-libre.org/upload/original/1425068380.png) Lonecake [Dragon Ball Edition ^^]
+# ![alt tag](http://pix.toile-libre.org/upload/original/1425068380.png) Lonecake [Avengers Edition ^^]
 
 Lonecake is a custom homescreen for FirefoxOS. It's based on the work of Pancake's Homescreen
 This branch is a dragonball themed homescreen

@@ -523,22 +523,22 @@
   function get_icon(icon) { //custom icons
     var img = icon.icon;
 
-    if (icon.app.manifest.name == "Browser") img = "/img/dbz/5X843ks.gif";
-    if (icon.app.manifest.name == "Clock") img = "/img/dbz/6bJpRKl.gif";
-    if (icon.app.manifest.name == "FM Radio") img = "/img/dbz/8FsqnTC.gif";
-    if (icon.entryPoint == "dialer") img = "/img/dbz/AkYDsI8.gif";
-    if (icon.entryPoint == "contacts") img = "/img/dbz/biLPGS9.gif";
-    if (icon.app.manifest.name == "Calendar") img = "/img/dbz/HaYOBDu.gif";
-    if (icon.app.manifest.name == "Music") img = "/img/dbz/HNnNWm5.gif";
-    if (icon.app.manifest.name == "Settings") img = "/img/dbz/kpYjPex.gif";
+    if (icon.app.manifest.name == "Browser") img = "/img/avgrs/Agent Coulson-01.png";
+    if (icon.app.manifest.name == "Clock") img = "/img/avgrs/Black Widow-01.png";
+    if (icon.app.manifest.name == "FM Radio") img = "/img/avgrs/Captain America-01.png";
+    if (icon.entryPoint == "dialer") img = "/img/avgrs/Giant Man-01.png";
+    if (icon.entryPoint == "contacts") img = "/img/avgrs/Hawkeye-01.png";
+    if (icon.app.manifest.name == "Calendar") img = "/img/avgrs/Iron Man-01.png";
+    if (icon.app.manifest.name == "Music") img = "/img/avgrs/Iron Man Mark I-01.png";
+    if (icon.app.manifest.name == "Settings") img = "/img/avgrs/Loki-01.png";
 
-    if (icon.app.manifest.name == "Marketplace") img = "/img/dbz/Mp6e1TH.gif";
-    if (icon.app.manifest.name == "Messages") img = "/img/dbz/Nbrgdn3.gif";
-    if (icon.app.manifest.name == "Gallery") img = "/img/dbz/rj4MyPa.gif";
-    if (icon.app.manifest.name == "Camera") img = "/img/dbz/SVsRITU.gif";
-    if (icon.app.manifest.name == "Video") img = "/img/dbz/T8qgINH.gif";
-    if (icon.app.manifest.name == "E-Mail") img = "/img/dbz/XOEwhk6.gif";
-    if (icon.app.manifest.name == "Usage") img = "/img/dbz/xvti1NJ.gif";
+    if (icon.app.manifest.name == "Marketplace") img = "/img/avgrs/Iron Man Mark VI-01.png";
+    if (icon.app.manifest.name == "Messages") img = "/img/avgrs/Nick Fury-01.png";
+    if (icon.app.manifest.name == "Gallery") img = "/img/avgrs/War Machine-01.png";
+    if (icon.app.manifest.name == "Camera") img = "/img/avgrs/Thor-01.png";
+    if (icon.app.manifest.name == "Video") img = "/img/avgrs/Iron Man Mark II-01.png";
+    if (icon.app.manifest.name == "E-Mail") img = "/img/avgrs/Iron Man Mark II-01.png";
+    if (icon.app.manifest.name == "Usage") img = "/img/avgrs/Iron Man Mark V-01.png";
 
     return img;
   }
