@@ -523,22 +523,22 @@
   function get_icon(icon) { //custom icons
     var img = icon.icon;
 
-    if (icon.app.manifest.name == "Browser") img = "/img/isaac/260x185-400px-Monstro.svg.png";
-    if (icon.app.manifest.name == "Clock") img = "/img/isaac/CainHD.png";
-    if (icon.app.manifest.name == "FM Radio") img = "/img/isaac/Dead_Baby.png";
-    if (icon.entryPoint == "dialer") img = "/img/isaac/Dr_Fetus_Icon.png";
-    if (icon.entryPoint == "contacts") img = "/img/isaac/EveHD.png";
-    if (icon.app.manifest.name == "Calendar") img = "/img/isaac/SamsonHD.png";
-    if (icon.app.manifest.name == "Music") img = "/img/isaac/JudasHD.png";
-    if (icon.app.manifest.name == "Settings") img = "/img/isaac/Lucky_Foot_Icon.png";
+    if (icon.app.manifest.name == "Browser") img = "/img/pokemon/flareon_animate_2_by_sarilain-d6pzn4j.gif";
+    if (icon.app.manifest.name == "Clock") img = "/img/pokemon/free_bouncy_bulbasaur_icon_by_kattling-d6q2fij.gif";
+    if (icon.app.manifest.name == "FM Radio") img = "/img/pokemon/free_bouncy_caterpie_icon_by_kattling-d6t0tp6.gif";
+    if (icon.entryPoint == "dialer") img = "/img/pokemon/free_bouncy_charmander_icon_by_kattling-d5tk1q4.gif";
+    if (icon.entryPoint == "contacts") img = "/img/pokemon/free_bouncy_fennekin_icon_by_kattling-d5t8ci8.gif";
+    if (icon.app.manifest.name == "Calendar") img = "/img/pokemon/free_bouncy_gengar_icon_by_kattling-d6rim2w.gif";
+    if (icon.app.manifest.name == "Music") img = "/img/pokemon/free_bouncy_raichu_icon_by_kattling-d5mxk3v.gif";
+    if (icon.app.manifest.name == "Settings") img = "/img/pokemon/free_bouncy_shuppet_icon_by_kattling-d6rupxe.gif";
 
-    if (icon.app.manifest.name == "Marketplace") img = "/img/isaac/Maggy.png";
-    if (icon.app.manifest.name == "Messages") img = "/img/isaac/Peep_Full.png";
-    if (icon.app.manifest.name == "Gallery") img = "/img/isaac/SamsonHD.png";
-    if (icon.app.manifest.name == "Camera") img = "/img/isaac/The_Book_Of_Belial_Icon.png";
-    if (icon.app.manifest.name == "Video") img = "/img/isaac/IsaacHD.png";
-    if (icon.app.manifest.name == "E-Mail") img = "/img/isaac/The_Dice_Icon.png";
-    if (icon.app.manifest.name == "Usage") img = "/img/isaac/Whore_Of_Babylon_Icon.png";
+    if (icon.app.manifest.name == "Marketplace") img = "/img/pokemon/free_bouncy_spheal_icon_by_kattling-d6tdi31.gif";
+    if (icon.app.manifest.name == "Messages") img = "/img/pokemon/free_bouncy_torchic_icon_by_kattling-d6r0g8y.gif";
+    if (icon.app.manifest.name == "Gallery") img = "/img/pokemon/free_bouncy_zapdos_icon_by_kattling-d5qo7yc.gif";
+    if (icon.app.manifest.name == "Camera") img = "/img/pokemon/free_icon___avatar___cute_cleffa_by_sarilain-d6oc5em.gif";
+    if (icon.app.manifest.name == "Video") img = "/img/pokemon/free_pichu_bouncy_icon_by_kattling-d5o6lik.gif";
+    if (icon.app.manifest.name == "E-Mail") img = "/img/pokemon/grovyle_animate_by_sarilain-d6qduqq.gif";
+    if (icon.app.manifest.name == "Usage") img = "/img/pokemon/free_bouncy_duskull_icon_by_kattling-d5w1cxr.gif";
 
     return img;
   }
