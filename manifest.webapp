@@ -1,8 +1,8 @@
 {
-  "name": "Lonecake Avengers",
+  "name": "Lonecake BindingOfIsaac",
   "launch_path": "/index.html",
   "version": "1.0",
-  "description": "An alternative homescreen. Forked from Homecake. [AVENGERS EDITION]",
+  "description": "An alternative homescreen. Forked from Homecake. [ISAAC EDITION]",
   "type": "certified",
   "role": "homescreen",
   "orientation": ["portrait-primary"],

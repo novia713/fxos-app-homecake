@@ -523,22 +523,22 @@
   function get_icon(icon) { //custom icons
     var img = icon.icon;
 
-    if (icon.app.manifest.name == "Browser") img = "/img/avgrs/Agent Coulson-01.png";
-    if (icon.app.manifest.name == "Clock") img = "/img/avgrs/Black Widow-01.png";
-    if (icon.app.manifest.name == "FM Radio") img = "/img/avgrs/Captain America-01.png";
-    if (icon.entryPoint == "dialer") img = "/img/avgrs/Giant Man-01.png";
-    if (icon.entryPoint == "contacts") img = "/img/avgrs/Hawkeye-01.png";
-    if (icon.app.manifest.name == "Calendar") img = "/img/avgrs/Iron Man-01.png";
-    if (icon.app.manifest.name == "Music") img = "/img/avgrs/Iron Man Mark I-01.png";
-    if (icon.app.manifest.name == "Settings") img = "/img/avgrs/Loki-01.png";
+    if (icon.app.manifest.name == "Browser") img = "/img/isaac/260x185-400px-Monstro.svg.png";
+    if (icon.app.manifest.name == "Clock") img = "/img/isaac/CainHD.png";
+    if (icon.app.manifest.name == "FM Radio") img = "/img/isaac/Dead_Baby.png";
+    if (icon.entryPoint == "dialer") img = "/img/isaac/Dr_Fetus_Icon.png";
+    if (icon.entryPoint == "contacts") img = "/img/isaac/EveHD.png";
+    if (icon.app.manifest.name == "Calendar") img = "/img/isaac/SamsonHD.png";
+    if (icon.app.manifest.name == "Music") img = "/img/isaac/JudasHD.png";
+    if (icon.app.manifest.name == "Settings") img = "/img/isaac/Lucky_Foot_Icon.png";
 
-    if (icon.app.manifest.name == "Marketplace") img = "/img/avgrs/Iron Man Mark VI-01.png";
-    if (icon.app.manifest.name == "Messages") img = "/img/avgrs/Nick Fury-01.png";
-    if (icon.app.manifest.name == "Gallery") img = "/img/avgrs/War Machine-01.png";
-    if (icon.app.manifest.name == "Camera") img = "/img/avgrs/Thor-01.png";
-    if (icon.app.manifest.name == "Video") img = "/img/avgrs/Iron Man Mark II-01.png";
-    if (icon.app.manifest.name == "E-Mail") img = "/img/avgrs/Iron Man Mark II-01.png";
-    if (icon.app.manifest.name == "Usage") img = "/img/avgrs/Iron Man Mark V-01.png";
+    if (icon.app.manifest.name == "Marketplace") img = "/img/isaac/Maggy.png";
+    if (icon.app.manifest.name == "Messages") img = "/img/isaac/Peep_Full.png";
+    if (icon.app.manifest.name == "Gallery") img = "/img/isaac/SamsonHD.png";
+    if (icon.app.manifest.name == "Camera") img = "/img/isaac/The_Book_Of_Belial_Icon.png";
+    if (icon.app.manifest.name == "Video") img = "/img/isaac/IsaacHD.png";
+    if (icon.app.manifest.name == "E-Mail") img = "/img/isaac/The_Dice_Icon.png";
+    if (icon.app.manifest.name == "Usage") img = "/img/isaac/Whore_Of_Babylon_Icon.png";
 
     return img;
   }
