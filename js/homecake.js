@@ -523,22 +523,21 @@
   function get_icon(icon) { //custom icons
     var img = icon.icon;
 
-    if (icon.app.manifest.name == "Browser") img = "/img/pokemon/flareon_animate_2_by_sarilain-d6pzn4j.gif";
-    if (icon.app.manifest.name == "Clock") img = "/img/pokemon/free_bouncy_bulbasaur_icon_by_kattling-d6q2fij.gif";
-    if (icon.app.manifest.name == "FM Radio") img = "/img/pokemon/free_bouncy_caterpie_icon_by_kattling-d6t0tp6.gif";
-    if (icon.entryPoint == "dialer") img = "/img/pokemon/free_bouncy_charmander_icon_by_kattling-d5tk1q4.gif";
-    if (icon.entryPoint == "contacts") img = "/img/pokemon/free_bouncy_fennekin_icon_by_kattling-d5t8ci8.gif";
-    if (icon.app.manifest.name == "Calendar") img = "/img/pokemon/free_bouncy_gengar_icon_by_kattling-d6rim2w.gif";
-    if (icon.app.manifest.name == "Music") img = "/img/pokemon/free_bouncy_raichu_icon_by_kattling-d5mxk3v.gif";
-    if (icon.app.manifest.name == "Settings") img = "/img/pokemon/free_bouncy_shuppet_icon_by_kattling-d6rupxe.gif";
+    if (icon.app.manifest.name == "Browser") img = "/img/aquarium/algue.png";
+    if (icon.app.manifest.name == "Clock") img = "/img/aquarium/algue_verte.png";
+    if (icon.app.manifest.name == "FM Radio") img = "/img/aquarium/drole_bleu_fish.png";
+    if (icon.entryPoint == "dialer") img = "/img/aquarium/drole_jaune_fish.png";
+    if (icon.entryPoint == "contacts") img = "/img/aquarium/drole_rouge_fish.png";
+    if (icon.app.manifest.name == "Calendar") img = "/img/aquarium/drole_vert_fish.png";
+    if (icon.app.manifest.name == "Music") img = "/img/aquarium/babelfish.png";
+    if (icon.app.manifest.name == "Settings") img = "/img/aquarium/etoile_de_mer_violet.png";
 
-    if (icon.app.manifest.name == "Marketplace") img = "/img/pokemon/free_bouncy_spheal_icon_by_kattling-d6tdi31.gif";
-    if (icon.app.manifest.name == "Messages") img = "/img/pokemon/free_bouncy_torchic_icon_by_kattling-d6r0g8y.gif";
-    if (icon.app.manifest.name == "Gallery") img = "/img/pokemon/free_bouncy_zapdos_icon_by_kattling-d5qo7yc.gif";
-    if (icon.app.manifest.name == "Camera") img = "/img/pokemon/free_icon___avatar___cute_cleffa_by_sarilain-d6oc5em.gif";
-    if (icon.app.manifest.name == "Video") img = "/img/pokemon/free_pichu_bouncy_icon_by_kattling-d5o6lik.gif";
-    if (icon.app.manifest.name == "E-Mail") img = "/img/pokemon/grovyle_animate_by_sarilain-d6qduqq.gif";
-    if (icon.app.manifest.name == "Usage") img = "/img/pokemon/free_bouncy_duskull_icon_by_kattling-d5w1cxr.gif";
+    if (icon.app.manifest.name == "Marketplace") img = "/img/aquarium/good_bleu_fish.png";
+    if (icon.app.manifest.name == "Messages") img = "/img/aquarium/good_gris_fish.png";
+    if (icon.app.manifest.name == "Gallery") img = "/img/aquarium/good_jaune_fish.png";
+    if (icon.app.manifest.name == "Camera") img = "/img/aquarium/etoile_de_mer_jaune.png";
+    if (icon.app.manifest.name == "Video") img = "/img/aquarium/meduse_bleue.png";
+    if (icon.app.manifest.name == "E-Mail") img = "/img/aquarium/meduse_verte.png";
 
     return img;
   }
