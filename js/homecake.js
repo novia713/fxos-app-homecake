@@ -523,21 +523,22 @@
   function get_icon(icon) { //custom icons
     var img = icon.icon;
 
-    if (icon.app.manifest.name == "Browser") img = "/img/aquarium/algue.png";
-    if (icon.app.manifest.name == "Clock") img = "/img/aquarium/algue_verte.png";
-    if (icon.app.manifest.name == "FM Radio") img = "/img/aquarium/drole_bleu_fish.png";
-    if (icon.entryPoint == "dialer") img = "/img/aquarium/drole_jaune_fish.png";
-    if (icon.entryPoint == "contacts") img = "/img/aquarium/drole_rouge_fish.png";
-    if (icon.app.manifest.name == "Calendar") img = "/img/aquarium/drole_vert_fish.png";
-    if (icon.app.manifest.name == "Music") img = "/img/aquarium/babelfish.png";
-    if (icon.app.manifest.name == "Settings") img = "/img/aquarium/etoile_de_mer_violet.png";
+    if (icon.app.manifest.name == "Browser") img = "/img/dccomics/d417nn5.png";
+    if (icon.app.manifest.name == "Clock") img = "/img/dccomics/d417owb.png";
+    if (icon.app.manifest.name == "FM Radio") img = "/img/dccomics/d417szs.png";
+    if (icon.entryPoint == "dialer") img = "/img/dccomics/d417rxo.png";
+    if (icon.entryPoint == "contacts") img = "/img/dccomics/d417s2w.png";
+    if (icon.app.manifest.name == "Calendar") img = "/img/dccomics/d417sl7.png";
+    if (icon.app.manifest.name == "Music") img = "/img/dccomics/d417qjg.png";
+    if (icon.app.manifest.name == "Settings") img = "/img/dccomics/d417t7r.png";
 
-    if (icon.app.manifest.name == "Marketplace") img = "/img/aquarium/good_bleu_fish.png";
-    if (icon.app.manifest.name == "Messages") img = "/img/aquarium/good_gris_fish.png";
-    if (icon.app.manifest.name == "Gallery") img = "/img/aquarium/good_jaune_fish.png";
-    if (icon.app.manifest.name == "Camera") img = "/img/aquarium/etoile_de_mer_jaune.png";
-    if (icon.app.manifest.name == "Video") img = "/img/aquarium/meduse_bleue.png";
-    if (icon.app.manifest.name == "E-Mail") img = "/img/aquarium/meduse_verte.png";
+    if (icon.app.manifest.name == "Marketplace") img = "/img/dccomics/d417t30.png";
+    if (icon.app.manifest.name == "Messages") img = "/img/dccomics/d417toi.png";
+    if (icon.app.manifest.name == "Gallery") img = "/img/dccomics/d417tqv.png";
+    if (icon.app.manifest.name == "Camera") img = "/img/dccomics/d417ubq.png";
+    if (icon.app.manifest.name == "Video") img = "/img/dccomics/d417uql.png";
+    if (icon.app.manifest.name == "E-Mail") img = "/img/dccomics/d417ux3.png";
+    if (icon.app.manifest.name == "Usage") img = "/img/dccomics/d417p0u.png";
 
     return img;
   }

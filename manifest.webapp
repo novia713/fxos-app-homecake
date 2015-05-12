@@ -1,14 +1,14 @@
 {
-  "name": "Lonecake Pokemon Edition",
+  "name": "Lonecake DC Comics Edition",
   "launch_path": "/index.html",
   "version": "1.0",
-  "description": "An alternative homescreen. Forked from Homecake. [POKEMON EDITION]",
+  "description": "An alternative homescreen. Forked from Homecake. [DC COMICS EDITION]",
   "type": "certified",
   "role": "homescreen",
   "orientation": ["portrait-primary"],
   "developer": {
     "name": "leandro713",
-    "url": "https://github.com/novia713/fxos-app-homecake/tree/pokemon"
+    "url": "https://github.com/novia713/fxos-app-homecake/tree/dccomics"
   },
   "permissions": {
     "webapps-manage":{},

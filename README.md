@@ -1,4 +1,4 @@
-# ![alt tag](http://pix.toile-libre.org/upload/original/1431118922.png) Lonecake [Aquarium Edition]
+# ![alt tag](http://pix.toile-libre.org/upload/original/1431118922.png) Lonecake [DC Comics Edition]
 
 Lonecake is a custom homescreen for FirefoxOS. It's based on the work of Pancake's Homescreen
 This branch is a AQUARIUM themed homescreen
