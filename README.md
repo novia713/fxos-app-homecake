@@ -8,7 +8,7 @@ support for >= 1.4 versions (_currently at work for 1.3 version support_)
 ## Installation
 
 1. Git clone this repo, 
-2. Switch to this branch [git checkout dragonball]
+2. Switch to this branch [git checkout isaac]
 3. Open it with the WebIDE found in the DeveloperTools of the Firefox Nightly and press Play.
 
 
